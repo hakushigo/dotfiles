@@ -12,11 +12,14 @@
 set $mod Mod4
 
 #exec --no-startup-id picom -b
-#exec --no-startup-id polybar example
+#exec --no-startup-id polybar owo
+
+#
+exec --no-startup-id dunst -config ~/.config/i3/dunstrc
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:azukifontBI Medium 9
+font pango:azukifontBI Medium 0
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -33,10 +36,23 @@ bindsym $mod+M exec urxvt -e mpsyt
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
-exec --no-startup-id polybar example
-exec --no-startup-id feh --bg-scale ~/Downloads/xwallpaper.png
+
+# start polybar
+exec --no-startup-id polybar owo
+
+# exec --no-startup-id feh --bg-scale ~/Downloads/xwallpaper.png
+
+# Ranger, A file manager
 bindsym $mod+T exec urxvt -e ranger -r ~/.config/ranger
+
+# Shutdown the entire system
 bindsym $mod+Ctrl+S exec shutdown -h now
+
+# Restart the entire system
+bindsym $mod+Ctrl+R exec shutdown -r now
+
+# just take a scereenshot
+bindsym Print exec flameshot gui
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -114,16 +130,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1 - main"
-set $ws2 "2 - browser"
-set $ws3 "3 - music"
-set $ws4 "4 - code"
-set $ws5 "5 - chat"
-set $ws6 "6 - opencam"
-set $ws7 "7 - ms"
-set $ws8 "8 - random"
-set $ws9 "9 - ranfom"
-set $ws10 "10 - random"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -184,5 +200,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 default_border pixel 3
+# new_window 1pixel
 
-client.focused #873E40 #0000 #0000 #C97270 #C97270
+client.focused #873E40 #C97270 #C97270 #C97270 #C97270
