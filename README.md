@@ -3,5 +3,4 @@ my linux + i3 + rofi + polybar configuration. for back up purposes or sharing or
 [~~desktop~~ linux configutation](https://github/alnj/dotfiles)
 
 ## screenshots
-![](currentwallpaper.png)
 ![](screenshot.png)
