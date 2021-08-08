@@ -13,7 +13,7 @@ Xft.hintstyle:              hintslight
 #################################
 
 *background: #002b36
-*foreground: #657b83
+*foreground: #4f3d28
 !!*fading: 40
 *fadeColor: #002b36
 *cursorColor: #93a1a1
@@ -24,8 +24,8 @@ Xft.hintstyle:              hintslight
 *color0:  #F3EAE9
 *color8:  #D8B8B3
 ! DarkRed + Red
-*color1:  #873E40
-*color9:  #832426
+*color1:  #c9474a
+*color9:  #6e2628
 ! DarkGreen + Green
 *color2:  #839A53
 *color10: #6F873E
@@ -57,7 +57,7 @@ URxvt.internalBorder:       3
 URxvt.lineSpace:            0
 
 # transparency - true or false (default)
-#URxvt*transparent: true
+#URxvt*transparent: false
 
 # tint with any color; i.e., blue, red, tomato4, olivedrab2, etc.
 #   some nice listings are at:
@@ -71,8 +71,8 @@ URxvt*shading: 10
 
 URxvt*saveLines: 12000
 
-URxvt*background: #FFFCFD
-URxvt*foreground: #250E07
+URxvt*background: #4f3d28
+URxvt*foreground: #ffe3c2
 
 # Monaco Linux font
 URxvt*font: xft:Roboto Mono:pixelsize=12
@@ -86,4 +86,4 @@ URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 
 # scrollbar style - rxvt (default), plain, next, or xterm
-URxvt*scrollstyle: plain
+URxvt*scrollstyle: plainqqq
