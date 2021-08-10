@@ -41,7 +41,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id polybar owo
 
 # exec --no-startup-id feh --bg-scale ~/Downloads/xwallpaper.png
-
+exec --no-startup-id feh --bg-scale ~/wallpaper.*
 # Ranger, A file manager
 bindsym $mod+T exec urxvt -e ranger -r ~/.config/ranger
 
@@ -130,16 +130,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "1:一"
+set $ws2 "2:二"
+set $ws3 "3:三"
+set $ws4 "4:四"
+set $ws5 "5:五"
+set $ws6 "6:六"
+set $ws7 "7:七"
+set $ws8 "8:八"
+set $ws9 "9:九"
+set $ws10 "10:十"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -199,7 +199,16 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-default_border pixel 3
+default_border pixel 2
 # new_window 1pixel
 
-client.focused #873E40 #C97270 #C97270 #C97270 #C97270
+gaps inner 3
+gaps outer 3
+
+#8a6445
+
+client.focused 		#873E40 #C97270 #C97270 #C97270 #C97270
+client.focused_inactive #8a6445 #8a6445 #8a6445 #8a6445 #8a6445
+client.unfocused        #8a6445 #8a6445 #8a6445 #8a6445 #8a6445
+client.urgent           #8a6445 #8a6445 #8a6445 #8a6445 #8a6445
+client.placeholder      #8a6445 #8a6445 #8a6445 #8a6445 #8a6445

@@ -6,7 +6,7 @@ configuration {
 	font: "azukifontBI 11";
 	bw: 1;
 	show-icons: true;
-	terminal: "kitty";
+	terminal: "urxvt";
 	/*	ssh-client: "ssh";*/
 	drun-match-fields: "name,generic,exec,categories";
 	levenshtein-sort: true;
