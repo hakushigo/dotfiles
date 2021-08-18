@@ -41,7 +41,12 @@ exec --no-startup-id nm-applet
 exec --no-startup-id polybar owo
 
 # exec --no-startup-id feh --bg-scale ~/Downloads/xwallpaper.png
-exec --no-startup-id feh --bg-scale ~/wallpaper.*
+exec --no-startup-id feh --randomize --bg-fill ~/wallpaper.*
+
+
+bindsym $mod+Shift+W exec feh --randomize --bg-fill ~/Wallpaper/OTO/*
+
+
 # Ranger, A file manager
 bindsym $mod+T exec urxvt -e ranger -r ~/.config/ranger
 
@@ -53,6 +58,8 @@ bindsym $mod+Ctrl+R exec shutdown -r now
 
 # just take a scereenshot
 bindsym Print exec flameshot gui
+
+exec picom &
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -202,8 +209,10 @@ bindsym $mod+r mode "resize"
 default_border pixel 2
 # new_window 1pixel
 
-gaps inner 3
-gaps outer 3
+gaps inner 4
+gaps outer 5
+
+#border_radius 3
 
 #8a6445
 
@@ -212,3 +221,6 @@ client.focused_inactive #8a6445 #8a6445 #8a6445 #8a6445 #8a6445
 client.unfocused        #8a6445 #8a6445 #8a6445 #8a6445 #8a6445
 client.urgent           #8a6445 #8a6445 #8a6445 #8a6445 #8a6445
 client.placeholder      #8a6445 #8a6445 #8a6445 #8a6445 #8a6445
+
+exec i3-msg 'workspace "1"; exec "google-chrome --new-window classroom.google.com/u/1/h"'
+exec i3-msg 'workspace "1"; exec "google-chrome --new-window notion.so"'

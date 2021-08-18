@@ -46,7 +46,7 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 1
+border-size = 0
 border-color = #00000000
 
 ;padding-left = 0
@@ -58,8 +58,7 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = azukifontBI:pixelsize=10;2
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-1 = siji:size=10;1
 
 modules-left = bspwm i3 polywins
 modules-center = date
@@ -68,6 +67,8 @@ modules-right = xbacklight pulseaudio memory cpu wlan battery
 tray-position = right
 tray-padding = 1
 #tray-background = #0063ff
+
+bottom = true
 
 ;wm-restack = bspwm
 wm-restack = i3
@@ -225,7 +226,7 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = {colors.indibar-alt}
-label = cpu {%percentage%%}
+label = %percentage%%
 
 [module/memory]
 type = internal/memory
@@ -233,21 +234,20 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 #format-underline = ${colors.indibar-alt}
-label = mem {%percentage_used%%}
+label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = net1
+interface = wlp2s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = ${colors.indibar-alt}
 label-connected = %essid%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
+format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${colors.indibar-error}
-;label-disconnected = %ifname% disconnected
+label-disconnected =  %ifname%
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = 
@@ -283,7 +283,7 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = 
 
-format-prefix = 
+#format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 #format-underline = ${colors.indibar-alt}
 
@@ -293,11 +293,11 @@ label = %date% %time%
 type = internal/pulseaudio
 
 #format-volume = <label-volume> <bar-volume>
-label-volume = vol {%percentage%%}
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 label-volume-border = ${colors.indibar}
 
-label-muted = 🔇 muted
+label-muted =  !
 label-muted-foreground = #666
 
 bar-volume-width = 10
@@ -354,27 +354,28 @@ full-at = 98
 format-charging = <animation-charging> <label-charging>
 #format-charging-underline = ${colors.indibar}
 
-format-discharging = <label-discharging>
+format-discharging = <animation-discharging> <label-discharging>
 #format-discharging-underline = ${colors.indibar}
 
-format-full-prefix = ""
+
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = -
-animation-charging-1 = =
-animation-charging-2 = +
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
@@ -383,10 +384,10 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format = <ramp> <label>
-format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+format =  <label>
+#format-underline = #f50a4d
+#format-warn = <ramp> <label-warn>
+#format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
