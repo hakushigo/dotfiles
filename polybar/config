@@ -62,7 +62,7 @@ font-1 = siji:size=10;1
 
 modules-left = bspwm i3 polywins
 modules-center = date
-modules-right = xbacklight pulseaudio memory cpu wlan battery
+modules-right = xkeyboard xbacklight pulseaudio memory cpu wlan battery
 
 tray-position = right
 tray-padding = 1
@@ -102,10 +102,10 @@ blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+format-prefix-underline = 
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+label-layout-underline = 
 
 label-indicator-padding = 1
 label-indicator-margin = 1

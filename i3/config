@@ -25,6 +25,13 @@ font pango:azukifontBI Medium 0
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
+# BRIGHTNESS SHIT
+bindsym XF86MonBrightnessUp exec brightnessctl s $((20+$(brightnessctl g)))
+bindsym XF86MonBrightnessDown exec brightnessctl s $(($(brightnessctl g)-20))
+
+bindsym $mod+Mod1+Up exec brightnessctl s $((20+$(brightnessctl g)))
+bindsym $mod+Mod1+Down exec brightnessctl s $(($(brightnessctl g) - 20))
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -44,17 +51,17 @@ exec --no-startup-id polybar owo
 exec --no-startup-id feh --randomize --bg-fill ~/wallpaper.*
 
 
-bindsym $mod+Shift+W exec feh --randomize --bg-fill ~/Wallpaper/OTO/*
+#bindsym $mod+Shift+W exec feh --randomize --bg-fill ~/Wallpaper/OTO/*
 
 
 # Ranger, A file manager
 bindsym $mod+T exec urxvt -e ranger -r ~/.config/ranger
 
 # Shutdown the entire system
-bindsym $mod+Ctrl+S exec shutdown -h now
+bindsym $mod+Ctrl+S exec "i3-nagbar -t warning -m '(ㄒoㄒ)   Master want me to go?' -B 'yes, sowwy (◡△◡✿)' 'shutdown -h now'"
 
 # Restart the entire system
-bindsym $mod+Ctrl+R exec shutdown -r now
+bindsym $mod+Ctrl+R exec "i3-nagbar -t warning -m '(☉‿☉✿)   Master want restart me?' -B 'Yup! ヽ(‘ ∇‘ )ノ' 'shutdown -r now'"
 
 # just take a scereenshot
 bindsym Print exec flameshot gui
@@ -177,7 +184,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'v(=∩_∩=)ﾌ   Master want take a break from i3?' -B 'YEah (・∀・ )' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -206,8 +213,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-default_border pixel 2
-# new_window 1pixel
+default_border pixel 3
+#new_window none
 
 gaps inner 4
 gaps outer 5
@@ -216,11 +223,10 @@ gaps outer 5
 
 #8a6445
 
-client.focused 		#873E40 #C97270 #C97270 #C97270 #C97270
+client.unfocused	#873E40 #C97270 #C97270 #C97270 #C97270
 client.focused_inactive #8a6445 #8a6445 #8a6445 #8a6445 #8a6445
-client.unfocused        #8a6445 #8a6445 #8a6445 #8a6445 #8a6445
+client.focused	        #8a6445 #8a6445 #8a6445 #8a6445 #8a6445
 client.urgent           #8a6445 #8a6445 #8a6445 #8a6445 #8a6445
 client.placeholder      #8a6445 #8a6445 #8a6445 #8a6445 #8a6445
 
-exec i3-msg 'workspace "1"; exec "google-chrome --new-window classroom.google.com/u/1/h"'
-exec i3-msg 'workspace "1"; exec "google-chrome --new-window notion.so"'
+exec ~/.config/i3/scripts/startup

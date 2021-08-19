@@ -1,0 +1,7 @@
+# Go to Workspace no.1
+i3-msg "workspace number 1:一" 
+
+## Fireup Google Classroom and Notion
+### Google Classroom
+google-chrome --new-window classroom.google.com/u/1/h notion.so web.whatsapp.com &
+flatpak run us.zoom.Zoom

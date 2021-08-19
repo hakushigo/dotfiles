@@ -5,16 +5,16 @@
 
 active_text_color="#250F0B"
 active_bg=
-active_underline="#ECB3B2"
+active_underline=
 
-inactive_text_color="#250F0B"
+inactive_text_color="#876c67"
 inactive_bg=
 inactive_underline=
 
 separator="·"
 show="window_title" # options: window_title, window_class, window_classname
 forbidden_classes="Polybar Conky Gmrun"
-empty_desktop_message="<[^OwO^]> it's empty"
+empty_desktop_message=$(hostname)
 
 char_limit=10
 max_windows=15
@@ -209,8 +209,8 @@ generate_window_list() {
 
 		# Add on-click action Polybar formatting
 		printf "%s" "%{A1:$on_click raise_or_minimize $wid:}"
-		printf "%s" "%{A2:$on_click close $wid:}"
-		printf "%s" "%{A3:$on_click slop_resize $wid:}"
+		printf "%s" "%{A3:$on_click close $wid:}"
+		printf "%s" "%{A2:$on_click slop_resize $wid:}"
 		printf "%s" "%{A4:$on_click increment_size $wid:}"
 		printf "%s" "%{A5:$on_click decrement_size $wid:}"
 		# Print the final window name
