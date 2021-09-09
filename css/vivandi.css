@@ -1,0 +1,91 @@
+/*
+
+	Check google or your favourite search engine
+	to know how to use this CSS style. Unless, you already know
+
+*/
+
+button.ToolbarButton-Button {
+    color : black!important;
+}
+
+div.tab.active {
+    background-color: #FF9595!important;
+    color: white!important;
+}
+
+div.tab.active:hover{
+    color : white!important;
+}
+
+div#tabs-tabbar-container {
+    background-color: #fbebcf;
+    color : black;
+}
+
+div.tab {
+    background-color: transparent!important;
+    color: black;
+    margin: 0!important;
+    border-radius : 0!important;
+}
+
+div.tab:hover {
+    color : #565656!important;
+}
+
+#body{
+#    border : solid #92616f 2px
+#}
+
+#body:hover{
+#    border : solid #cc476d 2px
+#}
+
+button.vivaldi {
+    color: black;
+}
+
+#div#panels-container.icons {
+#    display: none;
+#}
+
+.window-buttongroup {
+    color: black;
+    visibility: hidden;
+    width: 0;
+}
+
+.button-toolbar.toggle-trash {
+    visibility: hidden;
+}
+
+div#tabs-container{
+    margin : 0;
+    padding-right : 0!important;
+}
+
+.UrlBar-SearchField.iconmenu-container.SearchField {
+    display: none;
+    width: 0!important;
+    padding: 0!important;
+}
+
+.UrlBar-AddressField {
+    margin-right: 5px;
+}
+
+.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
+    box-shadow: none!important;
+}
+
+.button-toolbar.button-narrow {
+    display: none;
+}
+
+.button-toolbar {
+}
+
+.UrlBar-AddressField {
+    border-radius: 0!important;
+}

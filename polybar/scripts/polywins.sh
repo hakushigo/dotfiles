@@ -12,9 +12,9 @@ inactive_bg=
 inactive_underline=
 
 separator="·"
-show="window_title" # options: window_title, window_class, window_classname
+show="window_class" # options: window_title, window_class, window_classname
 forbidden_classes="Polybar Conky Gmrun"
-empty_desktop_message=$(hostname)
+empty_desktop_message=$(whoami)'@'$(hostname)
 
 char_limit=10
 max_windows=15
