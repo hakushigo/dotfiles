@@ -31,7 +31,7 @@ then
 	cp /.config/fonts ~/.fonts
 	
 	echo "copy urxvt"
-	cp ,/{,vimrc, .Xdefaults, wallpaper*, neofetch.png} ~/
+	cp ./{vimrc, .Xdefaults, wallpaper*, neofetch.png} ~/
 
 	# Last Touch
 	echo "set your wallpaper"
