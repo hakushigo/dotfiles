@@ -58,10 +58,10 @@ exec --no-startup-id feh --randomize --bg-fill ~/wallpaper.*
 bindsym $mod+T exec urxvt -e ranger -r ~/.config/ranger
 
 # Shutdown the entire system
-bindsym $mod+Ctrl+S exec "i3-nagbar -t warning -m '(ㄒoㄒ)   Master want me to go?' -B 'yes, sowwy (◡△◡✿)' 'sudo shutdown -h now'"
+bindsym $mod+Ctrl+S exec "i3-nagbar -t warning -m '(ㄒoㄒ)   Master want me to go?' -B 'yes, sowwy (◡△◡✿)' 'systemctl poweroff'"
 
 # Restart the entire system
-bindsym $mod+Ctrl+R exec "i3-nagbar -t warning -m '(☉‿☉✿)   Master want restart me?' -B 'Yup! ヽ(‘ ∇‘ )ノ' 'sudo shutdown -r now'"
+bindsym $mod+Ctrl+R exec "i3-nagbar -t warning -m '(☉‿☉✿)   Master want restart me?' -B 'Yup! ヽ(‘ ∇‘ )ノ' 'systemctl reboot'"
 
 # just take a scereenshot
 bindsym Print exec flameshot gui
@@ -213,11 +213,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-default_border pixel 3
+default_border pixel 1
 #new_window none
 
-gaps inner 4
-gaps outer 5
+gaps inner 5
+#gaps outer 5
 
 #border_radius 3
 
@@ -225,10 +225,11 @@ gaps outer 5
 
 client.unfocused	#873E40 #C97270 #C97270 #C97270 #C97270
 client.focused_inactive #873E40 #C97270 #C97270 #C97270 #C97270
-client.focused	        #8a6445 #8a6445 #8a6445 #8a6445 #8a6445
+client.focused	        #000000 #000000 #000000 #000000 #00000
 client.urgent           #873E40 #C97270 #C97270 #C97270 #C97270
 client.placeholder      #873E40 #C97270 #C97270 #C97270 #C97270
 
+for_window [class="exe"] floating enable
 
 #bindsym $mod+c exec google-chrome file:///home/michael/chromegreets.html
 #exec google-chrome file:///home/michael/chromegreets.html

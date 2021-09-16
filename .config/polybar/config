@@ -62,7 +62,7 @@ font-1 = Wuncon Siji:size=10;1
 
 modules-left = bspwm date i3 
 modules-center = polywins
-modules-right = xbacklight pulseaudio memory cpu wlan battery
+modules-right = xbacklight pulseaudio  memory cpu wlan battery
 
 tray-position = right
 tray-padding = 1
@@ -277,11 +277,11 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
-date-alt = " %Y-%m-%d"
+date = " %H:%M·%d/%m"
+#date-alt = %H:%M
 
-time = %H:%M
-time-alt = 
+#time =   
+#time-alt = 
 
 #format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
@@ -320,13 +320,15 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/alsa]
 type = internal/alsa
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+#format-volume = <label-volume> <bar-volume>
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
+label-muted = " mtd"
+
+#format-muted-prefix = " !"
+#format-muted-foreground = ${colors.foreground-alt}
+#label-muted = sound muted
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55

@@ -1,7 +1,8 @@
 configuration {
-	modi: "window,drun,run,ssh";
-	width: 350;
-	lines: 20;
+	modi: "";
+	display-drun : "\\(OvO)>";
+	width: 300;
+	lines: 17;
 	columns: 1;
 	font: "azukifontBI 11";
 	bw: 1;
@@ -10,10 +11,9 @@ configuration {
 	/*	ssh-client: "ssh";*/
 	drun-match-fields: "name,generic,exec,categories";
 	levenshtein-sort: true;
-	sidebar-mode: true;
-	combi-modi: "drun,run,ssh";
+	sidebar-mode: false;
+	combi-modi: "drun";
 	matching: "fuzzy";
 	/*	max-history-size: 25;*/
 	combi-hide-mode-prefix: true;
-
 }
